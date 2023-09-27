@@ -17,7 +17,7 @@ jobs:
         with:
            node-version: 20.7.0
       - name: setup semantic-release
-        run: npm install semantic-release @semantic-release/git @semantic-release/github -D  
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D  
       - name:  
         run: npx semantic-release
         env:
