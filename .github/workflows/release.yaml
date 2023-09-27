@@ -12,9 +12,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: release
-        run: npm install --save-dev semantic-release
-      - run: npm install semantic-release @semantic-release/git @semantic-release/github -D  
-      - run: npx semantic-release
+      - name: setup Node.js  
+        uses: actions/setup-node@v2
+        with:
+           node-version: 20.7.0
+      - name: setup semantic-release
+        run: npm install semantic-release @semantic-release/git @semantic-release/github -D  
+      - name:  
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}        
