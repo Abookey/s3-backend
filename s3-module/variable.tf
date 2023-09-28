@@ -8,3 +8,8 @@ variable "region" {
   default = "us-west-2"
 
 }
+
+variable "versioning" {
+  type = string
+  default = "enable"
+}
