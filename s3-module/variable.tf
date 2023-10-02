@@ -9,11 +9,11 @@ variable "region" {
 }
 
 variable "versioning" {
-  type = string
+  type    = string
   default = "Enabled"
 }
 
 variable "create_vpc" {
-  type = bool
+  type    = bool
   default = true
 }
